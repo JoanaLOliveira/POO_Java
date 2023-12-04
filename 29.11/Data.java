@@ -1,10 +1,21 @@
+/* 
+Escreva um programa que leia uma data com dia, mês e ano como
+números inteiros e retorne a data no formato a seguir:
+    “[dia] de [mês] de [ano]”
+    “9 de agosto de 2021”
+    Utilize a estrutura if…else
+Informe também quantos dias tem o mês da data informada
+    Para simplificar, considere que fevereiro sempre tem 28 dias
+    Utilize a estrutura switch
+*/
+
 import java.util.Scanner;
 
 public class Data {
     public static void main(String[] args) {
         Scanner ent = new Scanner(System.in);
 
-        int dia, mes, ano;
+        int dia, mes, ano, qtdDias;
         String saidaFormatada= "";
         System.out.println("Dia: ");
         dia = ent.nextInt();
@@ -18,31 +29,49 @@ public class Data {
         if (mes == 1 ) {
             saidaFormatada += "janeiro";
         } else if (mes == 2 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "fevereiro";
         } else if (mes == 3 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "marco";
         } else if (mes == 4 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "abril";
         } else if (mes == 5 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "maio";
         } else if (mes == 6 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "junho";
         } else if (mes == 7 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "julho";
         } else if (mes == 8 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "agosto";
         } else if (mes == 9 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "setembro";
         } else if (mes == 10 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "outubro";
         } else if (mes == 11 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "novembro";
         } else if (mes == 12 ) {
-            saidaFormatada += "janeiro";
+            saidaFormatada += "dezembro";
         } 
 
-        saidaFormatada += ("de" + mes);
+        saidaFormatada += (" de " + ano);
 
+        System.out.println(saidaFormatada);
+
+        switch (mes) {
+            case 1:
+            case 3:
+            case 5:
+            case 8:
+            case 9:
+            case 12:
+                qtdDias = 31;
+                break;
+            case 2:
+                qtdDias = 28;
+            default: 
+                qtdDias = 30;
+        }
+
+        System.out.println("Dias do mes: " + qtdDias);
         ent.close();
     }
 }
