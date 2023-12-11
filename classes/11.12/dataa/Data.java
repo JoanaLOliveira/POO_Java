@@ -1,3 +1,4 @@
+package dataa;
 public class Data {
     int dia;
     int mes;
