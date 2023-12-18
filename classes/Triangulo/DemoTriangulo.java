@@ -1,4 +1,4 @@
-package Triangulo;
+package classes.Triangulo;
 
 public class DemoTriangulo {
     public static void main(String[] args) {
